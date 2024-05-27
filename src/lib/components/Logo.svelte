@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let logoClass: string = '';
+  export let logoClass: string = ''
 </script>
 
 <svg
@@ -14,15 +14,9 @@
   version="1.0"
   ><defs
     ><filter x="0%" y="0%" width="100%" height="100%" id="6790f1ecd1"
-      ><feColorMatrix
-        values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"
-        color-interpolation-filters="sRGB"
-      /></filter
+      ><feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" color-interpolation-filters="sRGB" /></filter
     ><filter x="0%" y="0%" width="100%" height="100%" id="da3040cb7c"
-      ><feColorMatrix
-        values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0.2126 0.7152 0.0722 0 0"
-        color-interpolation-filters="sRGB"
-      /></filter
+      ><feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0.2126 0.7152 0.0722 0 0" color-interpolation-filters="sRGB" /></filter
     ><clipPath id="cfa32f1531"
       ><path
         d="M 68.738281 5.394531 L 306.488281 5.394531 L 306.488281 369.894531 L 68.738281 369.894531 Z M 68.738281 5.394531 "
@@ -38,9 +32,7 @@
       preserveAspectRatio="xMidYMid meet"
     /><mask id="2fc2644f04"
       ><g filter="url(#6790f1ecd1)"
-        ><g
-          filter="url(#da3040cb7c)"
-          transform="matrix(0.669687, 0, 0, 0.669687, -4.647886, -36.784128)"
+        ><g filter="url(#da3040cb7c)" transform="matrix(0.669687, 0, 0, 0.669687, -4.647886, -36.784128)"
           ><image
             x="0"
             y="0"

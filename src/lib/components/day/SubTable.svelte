@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let teacher: any[];
+  export let teacher: any[]
 </script>
 
 <div class="bg-slate-800 p-1 rounded-xl shadow-xl">

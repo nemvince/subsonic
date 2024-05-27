@@ -1,10 +1,10 @@
 <script lang="ts">
-  import DayDisplay from '$lib/components/day/DayDisplay.svelte';
-  import { pb } from '$lib/pocketbase';
+  import DayDisplay from '$lib/components/day/DayDisplay.svelte'
+  import { pb } from '$lib/pocketbase'
 
-  let pbPromise = pb.collection('subsSplit').getFullList();
+  let pbPromise = pb.collection('subsSplit').getFullList()
 
-  import { classFilter } from '$lib/store/classFilter';
+  import { classFilter } from '$lib/store/classFilter'
 </script>
 
 {#await pbPromise}
@@ -14,12 +14,7 @@
     <div class="max-w-5xl mx-auto">
       {#each data as day}
         {#if $classFilter === '' || day.classes.includes($classFilter)}
-          <DayDisplay
-            date={day.day}
-            teachers={day.teachers}
-            specialScheduleLink={day?.schedule}
-            comment={day?.comment}
-          />
+          <DayDisplay date={day.day} teachers={day.teachers} specialScheduleLink={day?.schedule} comment={day?.comment} />
         {/if}
       {/each}
       <!-- check if filtered class has no subs -->
@@ -29,7 +24,7 @@
           <button
             class="text-center text-slate-700 font-bold p-2 w-36 mt-3 rounded-xl shadow-xl bg-emerald-400"
             on:click={() => {
-              classFilter.set('');
+              classFilter.set('')
             }}>Összes osztály</button
           >
         </div>
