@@ -1,6 +1,7 @@
 <script lang="ts">
   import SubTable from '$lib/components/day/SubTable.svelte'
   import { pb } from '$lib/pocketbase'
+  import type { RecordModel } from 'pocketbase'
 
   export let date: Date
   export let specialScheduleLink: string = ''
@@ -8,13 +9,11 @@
   export let teachers: string
   const subsList = teachers.split(',').filter((sub: string) => sub !== '')
 
-  let promises: any[] = []
+  let promises: Promise<RecordModel[]>[] = []
 
   subsList.forEach((sub: string) => {
     promises.push(pb.collection('substitution').getFullList({ filter: "from='" + sub + "'", expand: 'from,to,class,room' }))
   })
-
-  import { classFilter } from '$lib/store/classFilter'
 </script>
 
 <article class="bg-slate-900 text-slate-300 p-2 mx-2 rounded-xl shadow-lg">
