@@ -1,0 +1,416 @@
+[
+  {
+      "id": "_pb_users_auth_",
+      "name": "users",
+      "type": "auth",
+      "system": false,
+      "schema": [
+          {
+              "system": false,
+              "id": "users_name",
+              "name": "name",
+              "type": "text",
+              "required": false,
+              "presentable": false,
+              "unique": false,
+              "options": {
+                  "min": null,
+                  "max": null,
+                  "pattern": ""
+              }
+          },
+          {
+              "system": false,
+              "id": "users_avatar",
+              "name": "avatar",
+              "type": "file",
+              "required": false,
+              "presentable": false,
+              "unique": false,
+              "options": {
+                  "mimeTypes": [
+                      "image/jpeg",
+                      "image/png",
+                      "image/svg+xml",
+                      "image/gif",
+                      "image/webp"
+                  ],
+                  "thumbs": null,
+                  "maxSelect": 1,
+                  "maxSize": 5242880,
+                  "protected": false
+              }
+          }
+      ],
+      "indexes": [],
+      "listRule": "id = @request.auth.id",
+      "viewRule": "id = @request.auth.id",
+      "createRule": "",
+      "updateRule": "id = @request.auth.id",
+      "deleteRule": "id = @request.auth.id",
+      "options": {
+          "allowEmailAuth": true,
+          "allowOAuth2Auth": true,
+          "allowUsernameAuth": true,
+          "exceptEmailDomains": null,
+          "manageRule": null,
+          "minPasswordLength": 8,
+          "onlyEmailDomains": null,
+          "onlyVerified": false,
+          "requireEmail": false
+      }
+  },
+  {
+      "id": "rs9spwf4yx40bkd",
+      "name": "class",
+      "type": "base",
+      "system": false,
+      "schema": [
+          {
+              "system": false,
+              "id": "3px8jgsn",
+              "name": "name",
+              "type": "text",
+              "required": false,
+              "presentable": false,
+              "unique": false,
+              "options": {
+                  "min": null,
+                  "max": null,
+                  "pattern": ""
+              }
+          }
+      ],
+      "indexes": [],
+      "listRule": "",
+      "viewRule": "",
+      "createRule": "",
+      "updateRule": "",
+      "deleteRule": "",
+      "options": {}
+  },
+  {
+      "id": "j4wqc42jxucpbtz",
+      "name": "room",
+      "type": "base",
+      "system": false,
+      "schema": [
+          {
+              "system": false,
+              "id": "coyaru0e",
+              "name": "name",
+              "type": "text",
+              "required": false,
+              "presentable": false,
+              "unique": false,
+              "options": {
+                  "min": null,
+                  "max": null,
+                  "pattern": ""
+              }
+          }
+      ],
+      "indexes": [],
+      "listRule": "",
+      "viewRule": "",
+      "createRule": "",
+      "updateRule": "",
+      "deleteRule": "",
+      "options": {}
+  },
+  {
+      "id": "gbka9fqxwj4s1hd",
+      "name": "special",
+      "type": "base",
+      "system": false,
+      "schema": [
+          {
+              "system": false,
+              "id": "firkddwo",
+              "name": "day",
+              "type": "date",
+              "required": false,
+              "presentable": false,
+              "unique": false,
+              "options": {
+                  "min": "",
+                  "max": ""
+              }
+          },
+          {
+              "system": false,
+              "id": "zzd2gkwz",
+              "name": "schedule",
+              "type": "url",
+              "required": false,
+              "presentable": false,
+              "unique": false,
+              "options": {
+                  "exceptDomains": null,
+                  "onlyDomains": null
+              }
+          },
+          {
+              "system": false,
+              "id": "ylupfpf2",
+              "name": "comment",
+              "type": "text",
+              "required": false,
+              "presentable": false,
+              "unique": false,
+              "options": {
+                  "min": null,
+                  "max": null,
+                  "pattern": ""
+              }
+          }
+      ],
+      "indexes": [],
+      "listRule": "",
+      "viewRule": "",
+      "createRule": "",
+      "updateRule": "",
+      "deleteRule": "",
+      "options": {}
+  },
+  {
+      "id": "15qwztadsbk4zu9",
+      "name": "substitution",
+      "type": "base",
+      "system": false,
+      "schema": [
+          {
+              "system": false,
+              "id": "vvgvtafx",
+              "name": "from",
+              "type": "relation",
+              "required": true,
+              "presentable": false,
+              "unique": false,
+              "options": {
+                  "collectionId": "y01c28a0dcj5qpq",
+                  "cascadeDelete": false,
+                  "minSelect": null,
+                  "maxSelect": 1,
+                  "displayFields": null
+              }
+          },
+          {
+              "system": false,
+              "id": "nlydeigd",
+              "name": "to",
+              "type": "relation",
+              "required": false,
+              "presentable": false,
+              "unique": false,
+              "options": {
+                  "collectionId": "y01c28a0dcj5qpq",
+                  "cascadeDelete": false,
+                  "minSelect": null,
+                  "maxSelect": 1,
+                  "displayFields": null
+              }
+          },
+          {
+              "system": false,
+              "id": "vjtnecgl",
+              "name": "class",
+              "type": "relation",
+              "required": true,
+              "presentable": false,
+              "unique": false,
+              "options": {
+                  "collectionId": "rs9spwf4yx40bkd",
+                  "cascadeDelete": false,
+                  "minSelect": null,
+                  "maxSelect": 1,
+                  "displayFields": null
+              }
+          },
+          {
+              "system": false,
+              "id": "akgogjzj",
+              "name": "room",
+              "type": "relation",
+              "required": false,
+              "presentable": false,
+              "unique": false,
+              "options": {
+                  "collectionId": "j4wqc42jxucpbtz",
+                  "cascadeDelete": false,
+                  "minSelect": null,
+                  "maxSelect": 1,
+                  "displayFields": null
+              }
+          },
+          {
+              "system": false,
+              "id": "vo7e8qxe",
+              "name": "period",
+              "type": "number",
+              "required": true,
+              "presentable": false,
+              "unique": false,
+              "options": {
+                  "min": null,
+                  "max": null,
+                  "noDecimal": false
+              }
+          },
+          {
+              "system": false,
+              "id": "n509hept",
+              "name": "isCancelled",
+              "type": "bool",
+              "required": false,
+              "presentable": false,
+              "unique": false,
+              "options": {}
+          },
+          {
+              "system": false,
+              "id": "xjwqpbr6",
+              "name": "comment",
+              "type": "text",
+              "required": false,
+              "presentable": false,
+              "unique": false,
+              "options": {
+                  "min": null,
+                  "max": null,
+                  "pattern": ""
+              }
+          },
+          {
+              "system": false,
+              "id": "awld19ub",
+              "name": "day",
+              "type": "date",
+              "required": true,
+              "presentable": false,
+              "unique": false,
+              "options": {
+                  "min": "",
+                  "max": ""
+              }
+          }
+      ],
+      "indexes": [],
+      "listRule": "",
+      "viewRule": "",
+      "createRule": "",
+      "updateRule": "",
+      "deleteRule": "",
+      "options": {}
+  },
+  {
+      "id": "y01c28a0dcj5qpq",
+      "name": "teacher",
+      "type": "base",
+      "system": false,
+      "schema": [
+          {
+              "system": false,
+              "id": "5rebvlve",
+              "name": "name",
+              "type": "text",
+              "required": true,
+              "presentable": false,
+              "unique": false,
+              "options": {
+                  "min": null,
+                  "max": null,
+                  "pattern": ""
+              }
+          }
+      ],
+      "indexes": [],
+      "listRule": "",
+      "viewRule": "",
+      "createRule": "",
+      "updateRule": "",
+      "deleteRule": "",
+      "options": {}
+  },
+  {
+      "id": "7qu9giuxe58vfyy",
+      "name": "subsSplit",
+      "type": "view",
+      "system": false,
+      "schema": [
+          {
+              "system": false,
+              "id": "bzdyyitq",
+              "name": "day",
+              "type": "date",
+              "required": true,
+              "presentable": false,
+              "unique": false,
+              "options": {
+                  "min": "",
+                  "max": ""
+              }
+          },
+          {
+              "system": false,
+              "id": "lyvdkcpu",
+              "name": "schedule",
+              "type": "url",
+              "required": false,
+              "presentable": false,
+              "unique": false,
+              "options": {
+                  "exceptDomains": null,
+                  "onlyDomains": null
+              }
+          },
+          {
+              "system": false,
+              "id": "lmu5pxdb",
+              "name": "comment",
+              "type": "text",
+              "required": false,
+              "presentable": false,
+              "unique": false,
+              "options": {
+                  "min": null,
+                  "max": null,
+                  "pattern": ""
+              }
+          },
+          {
+              "system": false,
+              "id": "plq0glcf",
+              "name": "classes",
+              "type": "json",
+              "required": false,
+              "presentable": false,
+              "unique": false,
+              "options": {
+                  "maxSize": 1
+              }
+          },
+          {
+              "system": false,
+              "id": "zm3e3rnx",
+              "name": "teachers",
+              "type": "json",
+              "required": false,
+              "presentable": false,
+              "unique": false,
+              "options": {
+                  "maxSize": 1
+              }
+          }
+      ],
+      "indexes": [],
+      "listRule": "",
+      "viewRule": "",
+      "createRule": null,
+      "updateRule": null,
+      "deleteRule": null,
+      "options": {
+          "query": "SELECT\n  substitution.id,\n  substitution.day,\n  special.schedule,\n  special.comment,\n  GROUP_CONCAT(DISTINCT(substitution.class)) as classes,\n  GROUP_CONCAT(DISTINCT(substitution.[from])) AS teachers\nFROM\n    substitution\nLEFT JOIN\n  special on special.day = substitution.day\nGROUP BY\n    substitution.day"
+      }
+  }
+]
