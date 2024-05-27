@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sub-table th,
+.sub-table td {
+  @apply px-1 md:px-3 py-2;
+}
+
+.sub-table th[scope='col'] {
+  @apply text-left text-xs font-bold text-slate-500;
+}
+
+.sub-table tr {
+  @apply border-b last:border-b-0 border-slate-700;
+}
+
+article {
+  @apply mb-3 first:mt-2;
+}
