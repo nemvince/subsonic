@@ -1,5 +1,7 @@
 <script lang="ts">
   export let teacher
+
+  import {classFilter} from '$lib/store/classFilter'
 </script>
 
 <div class="bg-slate-800 p-1 rounded-xl shadow-xl">
@@ -16,6 +18,7 @@
     </thead>
     <tbody>
       {#each teacher as sub}
+      {#if $classFilter === '' || sub.class === $classFilter}
         <tr>
           <th scope="row" class="font-medium">{sub.period}.</th>
           <td>{sub.expand.class.name}</td>
@@ -28,7 +31,9 @@
             <td class="font-semibold">Elmarad</td>
             <td>{sub.comment}</td>
           {/if}
+
         </tr>
+      {/if}
       {/each}
     </tbody>
   </table>

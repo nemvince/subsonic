@@ -12,6 +12,9 @@
 
   const classesPromise = pb.collection('class').getFullList()
 </script>
+<sveltekit::head>
+  <title>Helyettesítés</title>
+</sveltekit::head>
 
 <div class="flex flex-col bg-slate-700 min-h-svh">
   <nav class="dark:text-slate-300 dark:bg-slate-900 p-3 mt-2 mx-2 rounded-2xl shadow-xl">

@@ -14,6 +14,8 @@
   subsList.forEach((sub: string) => {
     promises.push(pb.collection('substitution').getFullList({ filter: "from='" + sub + "'", expand: 'from,to,class,room' }))
   })
+
+  import { classFilter } from '$lib/store/classFilter';
 </script>
 
 <article class="bg-slate-900 text-slate-300 p-2 mx-2 rounded-xl shadow-lg">
@@ -47,7 +49,9 @@
         <p>Loading...</p>
       {:then teacher}
         {#if teacher.length > 0}
+        {#if $classFilter === '' || teacher.some(sub => sub.class === $classFilter)}
           <SubTable {teacher} />
+          {/if}
         {/if}
       {:catch error}
         <p>{error.message}</p>
