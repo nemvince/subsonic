@@ -5,10 +5,11 @@
   let pbPromise = pb.collection('subsSplit').getFullList()
 
   import { classFilter } from '$lib/store/classFilter'
+  import LoadingView from '$lib/views/LoadingView.svelte'
 </script>
 
 {#await pbPromise}
-  <p>Loading...</p>
+  <LoadingView />
 {:then data}
   <div class="justify-center">
     <div class="max-w-5xl mx-auto">
