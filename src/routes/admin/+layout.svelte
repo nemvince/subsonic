@@ -3,6 +3,7 @@
 
   import Logo from '$lib/components/Logo.svelte'
 </script>
+
 <sveltekit::head>
   <title>Helyettesítés | Admin</title>
 </sveltekit::head>

@@ -1,8 +1,8 @@
 <script lang="ts">
-  export let error: Error;
+  export let error: Error
 
-  import Icon from '@iconify/svelte';
-  import { fade } from 'svelte/transition';
+  import Icon from '@iconify/svelte'
+  import { fade } from 'svelte/transition'
 </script>
 
 <div transition:fade={{ duration: 300 }} class="absolute top-0 left-0 h-svh w-svw">

@@ -12,7 +12,7 @@
   height="500"
   preserveAspectRatio="xMidYMid meet"
   version="1.0"
-  >
+>
   <defs
     ><filter x="0%" y="0%" width="100%" height="100%" id="6790f1ecd1"
       ><feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" color-interpolation-filters="sRGB" /></filter
